@@ -59,7 +59,7 @@ nav.top-navigation {
 <template>
   <nav class="top-navigation">
     <router-link :to="{ name: 'home'}">
-      <span class="logo">Roast</span>
+      <span class="logo">lbs</span>
     </router-link>
 
     <ul class="links">
@@ -72,7 +72,6 @@ nav.top-navigation {
 
     <div class="right">
       <img class="avatar"
-           :src="user.avatar"
            v-show="userLoadStatus == 2" />
     </div>
   </nav>
