@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Http\API;
+namespace app\Http\Controllers\API;
 
 use App\Models\Cafe;
 use App\Http\Controllers\Controller;
