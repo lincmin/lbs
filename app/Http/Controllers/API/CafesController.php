@@ -6,6 +6,7 @@ use App\Models\Cafe;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCafeRequest;
+use App\Utilities\GaodeMaps;
 
 class CafesController extends Controller
 {
@@ -52,6 +53,9 @@ class CafesController extends Controller
         $cafe->city     = $request->input('city');
         $cafe->state    = $request->input('state');
         $cafe->zip      = $request->input('zip');
+        $coordinates = GaodeMaps::geocodeAddress($cafe->address, $cafe->city, $cafe->state);
+        $cafe->latitude = $coordinates['lat'];
+        $cafe->longitude = $coordinates['lng'];
 
         $cafe->save();
 
