@@ -1,5 +1,4 @@
 <style>
-
 </style>
 
 <template>
@@ -10,10 +9,13 @@
 </template>
 
 <script>
-import Navigation from '../components/global/Navigation.vue';
+import Navigation from "../components/global/Navigation.vue";
 export default {
+  created() {
+    this.$store.dispatch("loadCafes");
+  },
   components: {
     Navigation
   }
-}
+};
 </script>

@@ -1,4 +1,5 @@
 var api_url = '';
+var gaode_maps_js_api_key = '';
 
 switch (process.env.NODE_ENV) {
   case 'development':
@@ -10,5 +11,6 @@ switch (process.env.NODE_ENV) {
 }
 
 export const LBS_CONFIG = {
-  API_URL: api_url
+  API_URL: api_url,
+  GAODE_MAPS_JS_API_KEY: gaode_maps_js_api_key
 }
