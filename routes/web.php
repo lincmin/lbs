@@ -26,3 +26,5 @@ Route::get('/auth/{social}/callback', 'Web\AuthenticationController@getSocialCal
 Route::get('geocode', function () {
     return \App\Utilities\GaodeMaps::geocodeAddress('深圳北站', '深圳', '广东');
 });
+
+Route::get('/cafe/{id}','API\CafesController@getCafe');
