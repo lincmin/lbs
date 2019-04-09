@@ -24,5 +24,18 @@ export default {
             description: description,
             roaster: roaster
         })
+    },
+    /**
+    * POST  /api/v1/cafes/{cafeID}/like
+    */
+    postLikeCafe: function (cafeID) {
+        return axios.post(LBS_CONFIG.API_URL + '/cafes/' + cafeID + '/like');
+    },
+
+    /**
+    * DELETE /api/v1/cafes/{cafeID}/like
+    */
+    deleteLikeCafe: function (cafeID) {
+        return axios.delete(LBS_CONFIG.API_URL + '/cafes/' + cafeID + '/like');
     }
 }
